@@ -20,7 +20,7 @@ export default function Home() {
             {/* Rotating Mandala */}
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <img
-                src="/images/mandala.svg"
+                src="/images/mandala.webp"
                 alt="Mandala"
                 className="w-full h-full animate-spin"
                 style={{ animationDuration: '30s' }}
@@ -28,7 +28,7 @@ export default function Home() {
               {/* Acharya Portrait in center */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                  src="/images/acharya-portrait.svg"
+                  src="/images/acharya-portrait.webp"
                   alt="Acharya Nikhil Shastri"
                   className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl"
                 />
