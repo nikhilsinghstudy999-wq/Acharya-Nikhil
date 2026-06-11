@@ -1,8 +1,8 @@
-export default function PolicyPage() {
+export default function Page() {
   return (
-    <main className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-4xl font-serif text-gold">privacy policy</h1>
-      <p className="mt-4 text-white/70">Content to be added.</p>
-    </main>
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-serif text-orange-800 capitalize">privacy policy</h1>
+      <p className="mt-4 text-gray-600">Content to be updated.</p>
+    </div>
   );
 }

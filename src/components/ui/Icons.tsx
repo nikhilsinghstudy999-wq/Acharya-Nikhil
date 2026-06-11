@@ -1,0 +1,23 @@
+// Simple icon replacements (emoji) that accept any props (className, etc.)
+const makeIcon = (emoji: string) => (props: any) => <span {...props}>{emoji}</span>;
+export const Sparkles = makeIcon('✨');
+export const Star = makeIcon('⭐');
+export const ArrowRight = makeIcon('→');
+export const ShieldCheck = makeIcon('🛡️');
+export const FileText = makeIcon('📄');
+export const Clock = makeIcon('🕐');
+export const Award = makeIcon('🏆');
+export const Phone = makeIcon('📞');
+export const Heart = makeIcon('❤️');
+export const Briefcase = makeIcon('💼');
+export const Moon = makeIcon('🌙');
+export const Calendar = makeIcon('📅');
+export const ArrowLeft = makeIcon('←');
+export const Menu = makeIcon('☰');
+export const X = makeIcon('✕');
+export const Mail = makeIcon('✉️');
+export const MapPin = makeIcon('📍');
+export const MessageCircle = makeIcon('💬');
+export const Users = makeIcon('👥');
+export const Share2 = makeIcon('🔗');
+export const Sparkle = makeIcon('✨');

@@ -2,28 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Elegant animated background */
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 body {
   background: linear-gradient(135deg, #fff5f3, #fefce8, #fff7ed, #ffffff);
-  background-size: 400% 400%;
-  animation: gradientFlow 20s ease infinite;
-  min-height: 100vh;
+  background-attachment: fixed;
 }
 
-@layer components {
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-3xl shadow-xl;
-  }
-  .glass-card-dark {
-    @apply bg-white/80 backdrop-blur-md border border-white/50 rounded-3xl shadow-xl;
-  }
-  .cosmic-gradient {
-    background: inherit;
-  }
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-3xl shadow-xl;
 }

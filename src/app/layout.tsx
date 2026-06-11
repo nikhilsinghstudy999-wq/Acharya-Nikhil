@@ -1,28 +1,17 @@
 import '@/styles/globals.css';
-import { siteConfig } from '@/lib/seo-constants';
+import type { Metadata } from 'next';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: { default: siteConfig.name, template: `%s | ${siteConfig.shortName}` },
-  description: siteConfig.description,
-  keywords: ['astrology','horoscope','vedic','daily horoscope','kundli','tarot'],
-  authors: [{ name: siteConfig.author }],
-  openGraph: {
-    type:'website', locale:'en_IN', url: siteConfig.url,
-    title: siteConfig.name, description: siteConfig.description,
-    siteName: siteConfig.shortName,
-    images: [{ url: siteConfig.ogImage, width:1200, height:630 }]
-  },
-  twitter: { card:'summary_large_image', title: siteConfig.name, description: siteConfig.description },
+  title: 'Acharya Nikhil Shastri – India\'s Most Viewed Astrology Expert',
+  description: 'Daily horoscopes, tarot, and premium kundli by Acharya Nikhil Shastri.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-cosmic-900 text-white">
+      <body className="font-sans antialiased bg-gradient-to-br from-orange-50 to-yellow-50">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

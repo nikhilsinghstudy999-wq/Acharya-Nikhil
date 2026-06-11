@@ -1,8 +1,11 @@
-export default function AboutPage() {
+export default function About() {
   return (
-    <main className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-5xl font-serif text-gold">Acharya Nikhil Shastri</h1>
-      <p className="mt-6 text-white/80">World‑renowned Vedic astrologer with decades of experience.</p>
-    </main>
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-serif text-orange-800 text-center">Acharya Nikhil Shastri</h1>
+      <p className="mt-6 text-gray-700 leading-relaxed">
+        With over two decades of experience in Vedic astrology, Acharya Nikhil Shastri is India&apos;s most trusted
+        astrological guide. His unique blend of ancient wisdom and modern insight has transformed thousands of lives.
+      </p>
+    </div>
   );
 }

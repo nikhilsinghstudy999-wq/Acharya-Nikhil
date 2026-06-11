@@ -1,8 +1,20 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="90" fill="none" stroke="#F97316" stroke-width="2" stroke-dasharray="10,5"/>
-  <circle cx="100" cy="100" r="70" fill="none" stroke="#EAB308" stroke-width="2" stroke-dasharray="5,5"/>
-  <circle cx="100" cy="100" r="50" fill="none" stroke="#F97316" stroke-width="1.5"/>
-  <circle cx="100" cy="100" r="30" fill="none" stroke="#EAB308" stroke-width="1.5"/>
-  <path d="M100,10 L100,190 M10,100 L190,100 M30,30 L170,170 M30,170 L170,30" stroke="#FCD34D" stroke-width="1" opacity="0.5"/>
-  <circle cx="100" cy="100" r="10" fill="#F97316"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#g1)" stroke-width="2" stroke-dasharray="10,5"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <circle cx="200" cy="200" r="100" fill="none" stroke="url(#g1)" stroke-width="1"/>
+  <circle cx="200" cy="200" r="60" fill="none" stroke="url(#g1)" stroke-width="0.8"/>
+  <!-- Petals -->
+  <g fill="url(#g1)" opacity="0.6">
+    {Array.from({length:12}).map((_,i) => (
+      <path key={i} d={`M200,200 L${200+80*Math.cos(i*Math.PI/6)},${200+80*Math.sin(i*Math.PI/6)} Q${200+40*Math.cos((i+0.5)*Math.PI/6)},${200+40*Math.sin((i+0.5)*Math.PI/6)} ${200+80*Math.cos((i+1)*Math.PI/6)},${200+80*Math.sin((i+1)*Math.PI/6)} Z`} />
+    ))}
+  </g>
+  <circle cx="200" cy="200" r="30" fill="url(#g1)" />
 </svg>
