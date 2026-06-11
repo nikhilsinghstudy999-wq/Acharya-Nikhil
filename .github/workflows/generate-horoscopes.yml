@@ -2,9 +2,8 @@ name: Generate Daily Horoscopes
 
 on:
   schedule:
-    # Runs at 5:00 AM IST (11:30 PM UTC)
-    - cron: '30 23 * * *'
-  workflow_dispatch:  # allow manual trigger
+    - cron: '30 23 * * *'   # 5:00 AM IST
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -12,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}   # use PAT for checkout (ensures push works)
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,3 +38,6 @@ jobs:
             git commit -m "🤖 Daily horoscopes update [skip ci]"
             git push
           fi
+        env:
+          # The PAT is already used in checkout; push uses the same token
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
